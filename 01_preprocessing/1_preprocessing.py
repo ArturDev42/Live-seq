@@ -24,6 +24,11 @@ meta_all = pd.read_csv(root_dir / "data/meta.final.csv", index_col=0)
 meta_all.index = meta_all['sample_ID']
 print(meta_all)
 print(meta_all.columns)
+print(meta_all.Probe)
+print(meta_all.Date)
+print(meta_all.Sequencer)
+
+print("")
 print(meta_all.Extraction_time_h)
 non_nan_rows_exraction_time = meta_all[meta_all['Extraction_time_h'].notnull()]
 print(non_nan_rows_exraction_time)
